@@ -1,9 +1,8 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_BASEPATH : "",
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
 
@@ -11,9 +10,9 @@ module.exports = {
       test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/,
       use: [
         {
-          loader: 'file-loader',
+          loader: "file-loader",
           options: {
-            name: '[path][name].[ext]',
+            name: "[path][name].[ext]",
           },
         },
       ],
@@ -23,10 +22,10 @@ module.exports = {
   },
   images: {
     domains: [
-      'i1-vnexpress.vnecdn.net',
-      'res.cloudinary.com',
-      'cdnphoto.dantri.com.vn',
-      'nhandaoonline.vn'
+      "i1-vnexpress.vnecdn.net",
+      "res.cloudinary.com",
+      "cdnphoto.dantri.com.vn",
+      "nhandaoonline.vn",
     ],
   },
   // async rewrites() {
@@ -38,6 +37,6 @@ module.exports = {
   //   ];
   // },
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
 };
