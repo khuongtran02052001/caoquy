@@ -12,6 +12,7 @@ const FooterOne = () => {
     const getCategories = async () => {
       try {
         const response = await axios.get('/api/GetParentCategories');
+        console.log({ response })
         const parentCategories = response.data;
         // Lấy 7 danh mục cha đầu tiên
         const firstSevenCategories = parentCategories.slice(0, 6);
@@ -71,7 +72,7 @@ const FooterOne = () => {
               <div className="footer-logo-container">
                 <Link href="/">
                   <a>
-                    <Image 
+                    <Image
                       src="/images/logo-symbol.svg"
                       alt="footer logo"
                       className="footer-logo"
