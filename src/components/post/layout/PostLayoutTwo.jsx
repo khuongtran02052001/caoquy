@@ -10,18 +10,18 @@ const defaultAvatarSrc = "/images/category/BgWhite.png";
 const PostLayoutTwo = ({ postSizeMd, postBgDark }) => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/Top6ReactArticle");
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get("/api/Top6ReactArticle");
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const firstColumnData = data.slice(0, Math.ceil(data.length / 2));
   const secondColumnData = data.slice(Math.ceil(data.length / 2));

@@ -9,18 +9,18 @@ const defaultAvatarSrc = "/images/category/BgWhite.png"; // Default avatar sourc
 const PostVNExpress = ({ pClass, videoIcon, postSizeMd }) => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/LatesVNExpress");
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get("/api/LatesVNExpress");
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <div>
@@ -71,7 +71,7 @@ const PostVNExpress = ({ pClass, videoIcon, postSizeMd }) => {
                 )}
                 <li>
                   <span>
- </span>
+                  </span>
                   <span>{new Date(article.create_date).toLocaleDateString()}</span>
                 </li>
               </ul>

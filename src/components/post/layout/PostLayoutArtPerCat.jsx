@@ -10,18 +10,18 @@ const defaultAvatarSrc = "/images/category/BgWhite.png"; // Default avatar sourc
 const PostLayoutArtPerCat = ({ postSizeMd = false, postBgDark = false }) => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("/api/LatestArticlePerCat"); // Make request to API route
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get("/api/LatestArticlePerCat"); // Make request to API route
+  //       setData(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   // Function to limit the number of words in a string
   const limitWords = (text, limit) => {
