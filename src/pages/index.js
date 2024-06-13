@@ -11,12 +11,12 @@ import BackToTopButton from "../components/post/post-format/elements/BackToTopBu
 const HomeOne = ({ allPosts }) => {
   return (
     <>
-      <HeadMeta metaTitle="Home One" />
-      {/* <HeaderOne /> */}
+      {/* <HeadMeta metaTitle="Home One" />
+      <HeaderOne />
       <PostSectionOne postData={allPosts} />
       <PostSectionTwo postData={allPosts} />
       <PostSectionThree postData={allPosts} />
-      <PostSectionFive postData={allPosts} adBanner={true} />
+      <PostSectionFive postData={allPosts} adBanner={true} /> */}
       <FooterOne />
       <BackToTopButton />
     </>

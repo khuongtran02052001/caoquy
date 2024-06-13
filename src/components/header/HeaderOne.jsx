@@ -25,11 +25,11 @@ const HeaderOne = () => {
 
   useEffect(() => {
     setMount(true)
-  },[])
+  }, [])
 
   useEffect(() => {
     const toggleDropdownMenu = () => {
-      const dropownSelect = menuRef.current?.childNodes;
+      const dropdownSelect = menuRef.current?.childNodes;
       let dropdownList = [];
 
       for (let i = 0; i < dropdownSelect?.lengthth; i++) {
@@ -69,7 +69,7 @@ const HeaderOne = () => {
     setSearchShow(false);
     setMobileToggle(false);
   };
-  
+
   const handleShow = () => {
     setSearchShow(true);
     setMobileToggle(false);
@@ -90,7 +90,7 @@ const HeaderOne = () => {
     setMobileToggle(!mobileToggle);
     const HtmlTag = document.querySelector("html");
     const menuSelect = document.querySelectorAll(".main-navigation li");
-  
+
     if (HtmlTag.classList.contains("main-menu-opened")) {
       HtmlTag.classList.remove("main-menu-opened");
     } else {
@@ -98,7 +98,7 @@ const HeaderOne = () => {
         HtmlTag.classList.add("main-menu-opened");
       }, 800);
     }
-  
+
     menuSelect.forEach((element) => {
       element.addEventListener("click", function () {
         if (!element.classList.contains("has-dropdown")) {
@@ -139,11 +139,11 @@ const HeaderOne = () => {
     }
   };
 
-  if(!mount) return null
+  if (!mount) return null
 
   return (
     <>
-  
+
       <header className="page-header">
         <div className="header-top bg-grey-dark-one">
           <div className="container">
@@ -242,12 +242,12 @@ const HeaderOne = () => {
                 >
                   <i className="far fa-search" />
                 </button>
-               
+
               </div>
               <div
-              
+
               >
-                
+
               </div>
             </div>
           </div>
