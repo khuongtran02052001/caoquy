@@ -29,7 +29,7 @@ const HeaderOne = () => {
 
   useEffect(() => {
     const toggleDropdownMenu = () => {
-      const dropdownSelect = menuRef.current?.childNodes;
+      const dropownSelect = menuRef.current?.childNodes;
       let dropdownList = [];
 
       for (let i = 0; i < dropdownSelect?.lengthth; i++) {
