@@ -12,7 +12,7 @@ const HomeOne = ({ allPosts }) => {
   return (
     <>
       <HeadMeta metaTitle="Home One" />
-      <HeaderOne />
+      {/* <HeaderOne /> */}
       <PostSectionOne postData={allPosts} />
       <PostSectionTwo postData={allPosts} />
       <PostSectionThree postData={allPosts} />
