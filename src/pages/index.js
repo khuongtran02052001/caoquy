@@ -15,7 +15,7 @@ const HomeOne = ({ allPosts }) => {
       {allPosts && (
         <React.Fragment>
           <HeadMeta metaTitle="Home One" />
-          {/* <HeaderOne /> */}
+          <HeaderOne />
           <PostSectionOne postData={allPosts} />
           <PostSectionTwo postData={allPosts} />
           <PostSectionThree postData={allPosts} />
