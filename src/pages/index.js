@@ -1,3 +1,4 @@
+import React from "react";
 import { getAllPosts } from "../../lib/api";
 import HeadMeta from "../components/elements/HeadMeta";
 import FooterOne from "../components/footer/FooterOne";
@@ -10,16 +11,20 @@ import BackToTopButton from "../components/post/post-format/elements/BackToTopBu
 
 const HomeOne = ({ allPosts }) => {
   return (
-    <>
-      <HeadMeta metaTitle="Home One" />
-      {/* <HeaderOne /> */}
-      <PostSectionOne postData={allPosts} />
-      <PostSectionTwo postData={allPosts} />
-      <PostSectionThree postData={allPosts} />
-      <PostSectionFive postData={allPosts} adBanner={true} />
-      <FooterOne />
-      <BackToTopButton />
-    </>
+    <div>
+      {allPosts && (
+        <React.Fragment>
+          <HeadMeta metaTitle="Home One" />
+          {/* <HeaderOne /> */}
+          <PostSectionOne postData={allPosts} />
+          <PostSectionTwo postData={allPosts} />
+          <PostSectionThree postData={allPosts} />
+          <PostSectionFive postData={allPosts} adBanner={true} />
+          <FooterOne />
+          <BackToTopButton />
+        </React.Fragment>
+      )}
+    </div>
   );
 };
 
