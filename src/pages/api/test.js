@@ -2,5 +2,5 @@
 import axios from "axios";
 
 export default async function handler(req, res) {
-  return req.json({ success: true });
+  res.status(200).json({ message: "Hello from Next.js!" });
 }

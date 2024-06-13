@@ -9,7 +9,6 @@ import PostSectionTwo from "../components/post/PostSectionTwo";
 import BackToTopButton from "../components/post/post-format/elements/BackToTopButton";
 
 const HomeOne = ({ allPosts }) => {
-  alert(allPosts);
   return (
     <>
       {/* <HeadMeta metaTitle="Home One" />
@@ -18,7 +17,7 @@ const HomeOne = ({ allPosts }) => {
       <PostSectionTwo postData={allPosts} />
       <PostSectionThree postData={allPosts} />
       <PostSectionFive postData={allPosts} adBanner={true} /> */}
-      {/* <FooterOne /> */}
+      <FooterOne />
       <BackToTopButton />
     </>
   );
@@ -26,25 +25,23 @@ const HomeOne = ({ allPosts }) => {
 
 export default HomeOne;
 
-export async function getStaticProps() {
-  // const allPosts = getAllPosts([
-  //   "postFormat",
-  //   "trending",
-  //   "story",
-  //   "slug",
-  //   "title",
-  //   "excerpt",
-  //   "featureImg",
-  //   "cate",
-  //   "cate_bg",
-  //   "cate_img",
-  //   "author_name",
-  //   "date",
-  //   "post_views",
-  //   "post_share",
-  // ]);
-  const allPosts = await fetch("/api/test");
-
+export async function getServerSideProps() {
+  const allPosts = getAllPosts([
+    "postFormat",
+    "trending",
+    "story",
+    "slug",
+    "title",
+    "excerpt",
+    "featureImg",
+    "cate",
+    "cate_bg",
+    "cate_img",
+    "author_name",
+    "date",
+    "post_views",
+    "post_share",
+  ]);
   return {
     props: { allPosts },
   };
