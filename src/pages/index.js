@@ -17,7 +17,7 @@ const HomeOne = ({ allPosts }) => {
       <PostSectionTwo postData={allPosts} />
       <PostSectionThree postData={allPosts} />
       <PostSectionFive postData={allPosts} adBanner={true} /> */}
-      {/* <FooterOne /> */}
+      <FooterOne />
       <BackToTopButton />
     </>
   );
