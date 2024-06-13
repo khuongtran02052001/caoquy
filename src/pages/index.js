@@ -11,12 +11,12 @@ import BackToTopButton from "../components/post/post-format/elements/BackToTopBu
 const HomeOne = ({ allPosts }) => {
   return (
     <>
-      {/* <HeadMeta metaTitle="Home One" />
+      <HeadMeta metaTitle="Home One" />
       <HeaderOne />
       <PostSectionOne postData={allPosts} />
       <PostSectionTwo postData={allPosts} />
       <PostSectionThree postData={allPosts} />
-      <PostSectionFive postData={allPosts} adBanner={true} /> */}
+      <PostSectionFive postData={allPosts} adBanner={true} />
       <FooterOne />
       <BackToTopButton />
     </>
@@ -25,7 +25,7 @@ const HomeOne = ({ allPosts }) => {
 
 export default HomeOne;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const allPosts = getAllPosts([
     "postFormat",
     "trending",
@@ -42,6 +42,7 @@ export async function getServerSideProps() {
     "post_views",
     "post_share",
   ]);
+
   return {
     props: { allPosts },
   };
